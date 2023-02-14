@@ -106,7 +106,7 @@ schedule.scheduleJob('15 18 * * *', async function(){
 
 	client.guilds.cache.forEach(guild => {
 		const channel = guild.channels.cache.find(channel => channel.name === "fortnite-furry-bot")
-	console.log('deleting last message from server id '+ channel+ "\n")
+	console.log('deleting last message from server'+ "\n")
 	channel.bulkDelete(5)
 	.then(messages => console.log(`Bulk deleted ${messages.size} messages`))
 	.catch(console.error);
@@ -116,7 +116,7 @@ schedule.scheduleJob('15 18 * * *', async function(){
 
 	client.guilds.cache.forEach(guild => {
 		const channel = guild.channels.cache.find(channel => channel.name === "fortnite-furry-bot")
-	console.log('sending message to  server id '+ channel+ "\n")
+	console.log('sending message to  server'+ "\n")
 	channel.send ({
 		embeds: [embSkins, embEmotes], files: [streamSk, streamEm]
 	})	
